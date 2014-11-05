@@ -1,0 +1,33 @@
+<div class="twraps">
+
+	<div class="clearfix">
+	  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" context-menu menu-items="buttonMenu" pointer-node=".caret">
+	    Action <span class="caret"></span>
+	  </button>
+	  <button type="button" class="btn btn-default dropdown-toggle pull-right" data-toggle="dropdown" context-menu menu-items="buttonMenu" pointer-node=".caret">
+	    Action <span class="caret"></span>
+	  </button>
+	</div>
+	<hr>
+	
+	<table class="table table-bordered">
+	  <tr ng-repeat="item in items">
+	    <td>{{$index}}</td>
+	    <td>{{item.name + " " + $index}}</td>
+	    <td>{{item.address + " " + $index}}</td>
+	    <td context-menu menu-items="menus" id="{{'item_'+$index}}" title="{{'item_'+$index}}">
+	        <a context>Address - {{$index}} <span class="caret"></span></a>
+	    </td>
+	  </tr>
+	</table>
+
+	<div class="clearfix">
+	  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" context-menu menu-items="menus" pointer-node=".caret">
+	    Action <span class="caret"></span>
+	  </button>
+	  <button type="button" class="btn btn-default dropdown-toggle pull-right" data-toggle="dropdown" context-menu menu-items="menus" pointer-node=".caret">
+	    Action <span class="caret"></span>
+	  </button>
+	</div>
+
+</div>

@@ -1,0 +1,420 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"pr",
+				"props"
+			],
+			[
+				"le",
+				"length"
+			],
+			[
+				"approverL",
+				"approversList"
+			],
+			[
+				"wi",
+				"window"
+			],
+			[
+				"context-caret-bot",
+				"context-caret-bottom-left"
+			],
+			[
+				"context",
+				"contextMenuHeight"
+			],
+			[
+				"contex",
+				"contextMenu"
+			],
+			[
+				"Contex",
+				"contextMenuElm"
+			],
+			[
+				"contextMenuE",
+				"contextMenuHeight"
+			],
+			[
+				"lef",
+				"_left"
+			],
+			[
+				"act",
+				"action"
+			],
+			[
+				"page",
+				"pageY"
+			],
+			[
+				"set",
+				"setMenuPosition"
+			],
+			[
+				"ac",
+				"action"
+			],
+			[
+				"remove",
+				"removeClass"
+			],
+			[
+				"fa",
+				"false"
+			],
+			[
+				"key",
+				"keyCode"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"cons",
+				"console"
+			],
+			[
+				"t",
+				"this"
+			],
+			[
+				"fun",
+				"fun	Function"
+			],
+			[
+				"$sc",
+				"$scope	AngularJS"
+			],
+			[
+				"$sco",
+				"$scope	AngularJS(DI)"
+			],
+			[
+				"arr",
+				"arrayApp"
+			],
+			[
+				"m",
+				"mockBackend"
+			],
+			[
+				"elem",
+				"element"
+			],
+			[
+				"ele",
+				"elementWidth"
+			],
+			[
+				"off",
+				"offsetLeft"
+			],
+			[
+				"offse",
+				"offsetLeft"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 265.0,
+		"selected_items":
+		[
+			[
+				"save",
+				"Project: Save As"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 472.0
+	},
+	"console":
+	{
+		"height": 239.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/LND/array"
+	],
+	"file_history":
+	[
+		"/D/LND/array/index.html",
+		"/D/JATO/Source/Trunk-Old/Gruntfile.js",
+		"/D/JATO/Source/Trunk-Old/app/modules/uvm/programs/projects/home/controller.js",
+		"/D/JATO/Source/Trunk-Old/app/index.html",
+		"/D/LND/ng/context-menu/app/index.html",
+		"/D/LND/ng/context-menu/app/scripts/app.js",
+		"/D/LND/ng/context-menu/app/styles/main.scss",
+		"/D/LND/ng/context-menu/app/views/tpls/dropdown.tpl.html",
+		"/D/LND/ng/context-menu/app/scripts/controllers/about.js",
+		"/D/LND/ng/context-menu/app/views/about.html",
+		"/D/LND/ng/forms.js",
+		"/D/LND/ng/form.html",
+		"/D/LND/ng/index.html",
+		"/D/LND/ng/lodash.html",
+		"/D/LND/ng/array.html",
+		"/D/LND/ng/grid/index.html",
+		"/D/LND/ng/grid/scripts.js",
+		"/D/LND/ng/scripts.js",
+		"/D/JATO/Source/Trunk/karma.conf.js",
+		"/D/JATO/Source/Trunk/package.json",
+		"/D/LND/angularjs-advanced/testing/service-mock/before/notesApp1Spec.js",
+		"/D/LND/angularjs-advanced/testing/service-mock/before/notesApp1SpecWithSpyReturn.js",
+		"/D/LND/angularjs-advanced/testing/xhr/before/serverApp.js",
+		"/D/LND/angularjs-advanced/testing/xhr/before/serverAppSpec.js",
+		"/D/LND/angularjs-advanced/testing/xhr/before/karma.conf.js",
+		"/D/LND/angularjs-advanced/testing/xhr/before/serverAppWithService.js",
+		"/D/LND/angularjs-advanced/testing/controllers/before/karma.conf.js",
+		"/D/LND/angularjs-advanced/testing/xhr/before/package.json",
+		"/D/LND/angularjs-advanced/directives/modalService/app.js",
+		"/D/LND/angularjs-advanced/directives/modalService/index.html",
+		"/D/LND/angularjs-advanced/directives/modalService/modalService.js",
+		"/D/LND/angularjs-advanced/directives/modalService/simpleModal.html",
+		"/D/LND/angularjs-advanced/directives/compile/compile/index.html",
+		"/D/LND/angularjs-advanced/directives/compile/compile/directive.js",
+		"/D/LND/angularjs-advanced/directives/controllers/after/tab.js",
+		"/D/LND/angularjs-advanced/directives/controllers/after/tabs.js",
+		"/D/LND/angularjs-advanced/directives/controllers/after/index.html",
+		"/D/LND/angularjs-advanced/directives/controllers/before/tabs.js",
+		"/D/LND/angularjs-advanced/directives/controllers/before/tab.js",
+		"/D/LND/angularjs-advanced/directives/controllers/before/index.html",
+		"/D/LND/angularjs-advanced/directives/controllers/before/app.js",
+		"/D/LND/angularjs-advanced/directives/advanced-transclusion/before/index.html",
+		"/D/LND/angularjs-advanced/directives/advanced-transclusion/before/directive.js",
+		"/D/LND/angularjs-advanced/directives/advanced-transclusion/before/app.js",
+		"/D/LND/angularjs-advanced/README.md"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"D:\\JATO\\Source\\Trunk\\app\\modules\\uvm\\programs\\projects\\relationship",
+			"D:\\JATO\\Source\\Trunk\\app\\styles",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"console",
+			"setMenuPosition",
+			"hideContextMenu",
+			"removeContextMenu",
+			"\"",
+			"context-caret-bottom-left context-caret-top-right context-caret-top-left",
+			"context-caret-bottom-right context-caret-top-left context-caret-top-right",
+			"context-caret-top-right context-caret-bottom-left context-caret-bottom-right",
+			"context-caret-top-left context-caret-bottom-left context-caret-bottom-right",
+			"windowWidth - contextMenuLeftPos > contextMenuWidth",
+			"windowHeight - contextMenuTopPos > contextMenuHeight",
+			"windowWidth - contextMenuLeftPos < contextMenuWidth",
+			"context-caret-bottom-left",
+			"context-caret-bottom-right",
+			"_top",
+			"_left",
+			"          // if(window.innerWidth - _left < $(contextMenuElm).outerWidth(true)) {\n          //   console.log(\"Gone outside... \")\n          // }",
+			"[context]",
+			"\"",
+			"[",
+			"$contextMenuElm",
+			"$window",
+			"document",
+			"iAttrs",
+			"iElm",
+			"\"",
+			"data-toggle=\"dropdown\"",
+			"li",
+			"html:5",
+			"items",
+			"_index",
+			"items",
+			"html:5\n",
+			"html",
+			"html:5",
+			"5",
+			"transform",
+			"position:fixed",
+			"position",
+			"style",
+			"content-pa",
+			"style=\"position:fixed;height: auto !important;\"",
+			"auto !important",
+			"$parent.togglePinning(headers)",
+			"position",
+			"style",
+			"elementWidth",
+			" +",
+			"style",
+			"importa",
+			"relationship ",
+			"style",
+			"custom-DROP",
+			"div.ngHeaderSortColumn",
+			"dropdown-menu",
+			"context-menu",
+			"34px !",
+			"context-menu",
+			"height:34px !",
+			"context-m",
+			"self",
+			"karma",
+			"two-column",
+			"translateX",
+			"`",
+			"compass",
+			".content-panel",
+			"\""
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "cd...sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"D:\\JATO\\Source\\Trunk\\JATO.sublime-project"
+			],
+			[
+				"jat",
+				"D:\\JATO\\Source\\Trunk\\JATO.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 279.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
