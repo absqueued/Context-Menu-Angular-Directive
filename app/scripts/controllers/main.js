@@ -15,7 +15,6 @@ angular.module('contextMenuApp')
     for(var i=1; i <=20; i++) {
       $scope.items.push({name: 'Name ', address: 'Address '})
     }
-http://localhost/ng/context-menu/app/
     //Menu Items Array
     $scope.menus = [
       {label: 'View',   action: 'callView',   active: true},
@@ -29,7 +28,7 @@ http://localhost/ng/context-menu/app/
     $scope.buttonMenu = [
       {label: 'View Large',   action: 'callView',   active: true},
       {label: 'Delete this item', action: 'deleteItem', active: true}
-    ]
+    ];
 
     $scope.deleteItem = function(arg){
       console.warn('deleted ...')
@@ -38,13 +37,13 @@ http://localhost/ng/context-menu/app/
     $scope.callView = function(arg){
       console.info('View Call, another method')
     };
-    
+
   })
   .directive('contextMenu', ['$document', '$window', function($document, $window){
   	// Runs during compile
   	return {
   		restrict: 'A',
-  		link: function($scope, $element, $attr, ctrl) {
+  		link: function($scope, $element, $attr) {
 
         var contextMenuElm,
             $contextMenuElm,
@@ -71,8 +70,8 @@ http://localhost/ng/context-menu/app/
             contextMenuElm.setAttribute('id', 'context-menu');
             contextMenuElm.setAttribute('class', 'custom-context-menu');
 
-            $scope[menuItems].forEach(function(_item, _index){
-              var li = document.createElement('li');              
+            $scope[menuItems].forEach(function(_item){
+              var li = document.createElement('li');
               li.innerHTML = '<a>' + _item.label + '</a>';
 
               if(_item.action &&  _item.active) {
