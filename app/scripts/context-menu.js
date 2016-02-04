@@ -7,7 +7,7 @@
  * # contextMenu
  * Custom Context Menu Directive
  */
-angular.module('contextMenuApp')
+angular.module('pastaApp')
     .directive('contextMenu', ['$document', '$window', function ($document, $window) {
         // Runs during compile
         return {
@@ -30,7 +30,6 @@ angular.module('contextMenuApp')
                         bottomLeft: 'context-caret-bottom-left'
                     },
                     menuItems = $attr.menuItems;
-
                 function createContextMenu() {
                     var fragment = document.createDocumentFragment();
 
@@ -38,26 +37,55 @@ angular.module('contextMenuApp')
                         $contextMenuElm = $(contextMenuElm);
                     contextMenuElm.setAttribute('id', 'context-menu');
                     contextMenuElm.setAttribute('class', 'custom-context-menu');
-
-                    $scope[menuItems].forEach(function (_item) {
-                        var li = document.createElement('li');
-                        li.innerHTML = '<a>' + _item.label + '</a>';
-
-                        if (_item.action && _item.active) {
-                            li.addEventListener('click', function () {
-                                if (typeof $scope[_item.action] !== 'function') return false;
-                                $scope[_item.action]($attr);
-                            }, false);
-                        }
-
-                        if (!_item.active) li.setAttribute('class', 'disabled');
-                        fragment.appendChild(li);
-                    });
-
+                    
+                    mountContextMenu($scope[menuItems], fragment);
+                    
                     contextMenuElm.appendChild(fragment);
                     document.body.appendChild(contextMenuElm);
                     contextMenuWidth = $contextMenuElm.outerWidth(true);
                     contextMenuHeight = $contextMenuElm.outerHeight(true);
+                }
+                
+                function mountContextMenu(menuItems, fragment){
+                	menuItems.forEach(function (_item) {
+                    	var li = document.createElement('li');
+	                        
+                        li.innerHTML = '<a>' + _item.label + ' <span class="right-caret"></span></a>';
+                        
+                        if (_item.action && _item.active) {
+                            li.addEventListener('click', function () {
+                                if (typeof $scope[_item.action] !== 'function') return false;
+                                $scope[_item.action]($attr, $scope);
+                            }, false);
+                        }
+                        
+                        if(_item.divider){
+                    		addContextMenuDivider(fragment);
+                    	} 
+                        
+                        if (!_item.active) li.setAttribute('class', 'disabled');
+                        
+                        if(_item.subItems) {
+                        	addSubmenuItems(_item.subItems, li)
+                        }
+                        
+                        fragment.appendChild(li);
+                    });
+                }
+
+                function addSubmenuItems(subItems, parentLi){
+                    parentLi.setAttribute('class', 'dropdown-submenu')
+                    var ul = document.createElement('ul');
+                    parentLi.setAttribute("class", "dropdown-menu")
+                    mountContextMenu(subItems, ul)
+                        	
+                    parentLi.appendChild(ul)
+                }
+                
+                function addContextMenuDivider(fragment){
+                	var divider = document.createElement('li');
+            		divider.className = 'divider'
+            		fragment.appendChild(divider);
                 }
 
                 /**
