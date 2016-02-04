@@ -7,7 +7,7 @@
  * # contextMenu
  * Custom Context Menu Directive
  */
-angular.module('pastaApp')
+angular.module('contextMenuApp')
     .directive('contextMenu', ['$document', '$window', function ($document, $window) {
         // Runs during compile
         return {
