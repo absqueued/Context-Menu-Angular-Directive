@@ -73,14 +73,14 @@ angular.module('contextMenuApp')
                     });
                 }
 
-                function addSubmenuItems(subItems, parentLi){
-                    parentLi.setAttribute('class', 'dropdown-submenu')
-                    var ul = document.createElement('ul');
-                    parentLi.setAttribute("class", "dropdown-menu")
-                    mountContextMenu(subItems, ul)
-                        	
-                    parentLi.appendChild(ul)
-                }
+		function addSubmenuItems (subItems, parentLi) {
+			parentLi.setAttribute('class', 'dropdown-submenu')
+			var ul = document.createElement('ul')
+			ul.setAttribute('class', 'dropdown-menu')
+			mountContextMenu(subItems, ul)
+		
+			parentLi.appendChild(ul)
+		}
                 
                 function addContextMenuDivider(fragment){
                 	var divider = document.createElement('li');
