@@ -66,21 +66,22 @@ angular.module('contextMenuApp')
                         if (!_item.active) li.setAttribute('class', 'disabled');
                         
                         if(_item.subItems) {
-                        	addSubmenuItems(_item.subItems, li)
+				addSubmenuItems(_item.subItems, li, _item.active)
                         }
                         
                         fragment.appendChild(li);
                     });
                 }
 
-                function addSubmenuItems(subItems, parentLi){
-                    parentLi.setAttribute('class', 'dropdown-submenu')
-                    var ul = document.createElement('ul');
-                    parentLi.setAttribute("class", "dropdown-menu")
-                    mountContextMenu(subItems, ul)
-                        	
-                    parentLi.appendChild(ul)
-                }
+		function addSubmenuItems (subItems, parentLi, parentIsActive) {
+			parentLi.setAttribute('class', 'dropdown-submenu')
+			if (!parentIsActive) parentLi.setAttribute('class', 'disabled')
+			var ul = document.createElement('ul')
+			ul.setAttribute('class', 'dropdown-menu')
+			mountContextMenu(subItems, ul)
+			
+			parentLi.appendChild(ul)
+		}
                 
                 function addContextMenuDivider(fragment){
                 	var divider = document.createElement('li');
