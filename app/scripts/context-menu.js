@@ -56,6 +56,8 @@ angular.module('contextMenuApp')
                             li.addEventListener('click', function () {
                                 if (typeof $scope[_item.action] !== 'function') return false;
                                 $scope[_item.action]($attr, $scope);
+				    
+				removeContextMenu();
                             }, false);
                         }
                         
