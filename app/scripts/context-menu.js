@@ -46,44 +46,48 @@ angular.module('contextMenuApp')
                     contextMenuHeight = $contextMenuElm.outerHeight(true);
                 }
                 
-                function mountContextMenu(menuItems, fragment){
-                	menuItems.forEach(function (_item) {
-                    	var li = document.createElement('li');
-	                        
-                        li.innerHTML = '<a>' + _item.label + ' <span class="right-caret"></span></a>';
-                        
-                        if (_item.action && _item.active) {
-                            li.addEventListener('click', function () {
-                                if (typeof $scope[_item.action] !== 'function') return false;
-                                $scope[_item.action]($attr, $scope);
-				    
-				removeContextMenu();
-                            }, false);
-                        }
-                        
-                        if(_item.divider){
-                    		addContextMenuDivider(fragment);
-                    	} 
-                        
-                        if (!_item.active) li.setAttribute('class', 'disabled');
-                        
-                        if(_item.subItems) {
-				addSubmenuItems(_item.subItems, li, _item.active)
-                        }
-                        
-                        fragment.appendChild(li);
-                    });
-                }
+				function mountContextMenu(menuItems, fragment) {
+					menuItems.forEach(function (_item) {
+						var li = document.createElement('li');
 
-		function addSubmenuItems (subItems, parentLi, parentIsActive) {
-			parentLi.setAttribute('class', 'dropdown-submenu')
-			if (!parentIsActive) parentLi.setAttribute('class', 'disabled')
-			var ul = document.createElement('ul')
-			ul.setAttribute('class', 'dropdown-menu')
-			mountContextMenu(subItems, ul)
-			
-			parentLi.appendChild(ul)
-		}
+						li.innerHTML = '<a>' + _item.label + ' <span class="right-caret"></span></a>';
+
+						// check if menu is active or not.
+						// override by dynamic check.
+						var active = typeof _item.active !=='function' ? _item.active : _item.active($attr, $scope);
+
+						if (_item.action && active) {
+							li.addEventListener('click', function () {
+								if (typeof $scope[_item.action] !== 'function') return false;
+								$scope[_item.action]($attr, $scope);
+
+								removeContextMenu();
+							}, false);
+						}
+
+						if (_item.divider) {
+							addContextMenuDivider(fragment);
+						}
+
+						if (!active) li.setAttribute('class', 'disabled');
+
+						if (_item.subItems) {
+							addSubmenuItems(_item.subItems, li, active)
+						}
+
+						fragment.appendChild(li);
+					});
+				}
+
+				function addSubmenuItems (subItems, parentLi, parentIsActive) {
+					parentLi.setAttribute('class', 'dropdown-submenu')
+					if (!parentIsActive) parentLi.setAttribute('class', 'disabled')
+					var ul = document.createElement('ul')
+					ul.setAttribute('class', 'dropdown-menu')
+					mountContextMenu(subItems, ul)
+
+					parentLi.appendChild(ul)
+				}
                 
                 function addContextMenuDivider(fragment){
                 	var divider = document.createElement('li');
