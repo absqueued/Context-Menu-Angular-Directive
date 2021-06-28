@@ -2,7 +2,9 @@ Custom Context Menu
 ==========================
 
 ## Version 1.0
-This is a simple custom context menu, for AngularJS applications.
+This is a simple custom context menu, for AngularJS applications. Original source was :shekhardesigner
+
+This repository fixes some of bugs. 
 
 ## Demo
   - [http://shekhardesigner.github.io/Context-Menu-Angular-Directive/app/](http://shekhardesigner.github.io/Context-Menu-Angular-Directive/app/)
